@@ -48,9 +48,12 @@ GameObject * Node::GetContainedObject()
 	}
 }
 
-void Node::SetContainedObject()
+void Node::SetContainedObject(GameObject * object)
 {
-
+	if (object != nullptr)
+	{
+		this->containedObject = object;
+	}
 }
 
 

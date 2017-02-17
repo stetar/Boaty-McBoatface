@@ -22,7 +22,7 @@ public:
 	int GetNodeY();
 	void SetNodeY(int y);
 	GameObject* GetContainedObject();
-	void SetContainedObject();
+	void SetContainedObject(GameObject * object);
 	~Node();
 };
 

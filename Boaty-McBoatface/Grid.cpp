@@ -1,5 +1,5 @@
 #include "Grid.h"
-
+#include "Boat.h"
 
 
 Grid::Grid(int width = 7, int height = 7)
@@ -26,7 +26,7 @@ void Grid::SetStartingPosition(int x, int y)
 {
 	if (x <= width && y <= height && x > 0 && y > 0)
 	{
-		&gridArray[x][y].SetNodeType = NodeType::BOAT;
+		&gridArray[x][y].SetContainedObject(Boat * boat);
 	}
 }
 
