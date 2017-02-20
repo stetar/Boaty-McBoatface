@@ -6,6 +6,7 @@ class GameObject
 
 public:
 	GameObject();
+	virtual void Render();
 	~GameObject();
 };
 

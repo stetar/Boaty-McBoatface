@@ -4,6 +4,10 @@ GameObject::GameObject()
 {
 }
 
+void GameObject::Render()
+{
+}
+
 GameObject::~GameObject()
 {
 }
