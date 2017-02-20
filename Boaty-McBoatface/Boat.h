@@ -1,8 +1,7 @@
 #pragma once
 #include "GameObject.h"
 
-class Boat :
-	public GameObject
+class Boat : public GameObject
 {
 	GLuint texture;
 	float x;

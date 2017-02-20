@@ -9,6 +9,7 @@ Node::Node()
 void Node::SetNodeType(NodeType newType)
 {
 	this->type = newType;
+	DefineTextureToDraw(newType);
 }
 
 NodeType Node::GetNodeType()
@@ -16,24 +17,24 @@ NodeType Node::GetNodeType()
 	return this->type;
 }
 
-int Node::GetNodeX()
+int Node::GetNodeGridX()
 {
-	return this->nodeX;
+	return this->gridX;
 }
 
-void Node::SetNodeX(int x)
+void Node::SetNodeGridX(int x)
 {
-	this->nodeX = x;
+	this->gridX = x;
 }
 
-int Node::GetNodeY()
+int Node::GetNodeGridY()
 {
-	return this->nodeY;
+	return this->gridY;
 }
 
-void Node::SetNodeY(int y)
+void Node::SetNodeGridY(int y)
 {
-	this->nodeY = y;
+	this->gridY = y;
 }
 
 GameObject * Node::GetContainedObject()
@@ -56,7 +57,41 @@ void Node::SetContainedObject(GameObject * object)
 	}
 }
 
+void Node::DefineTextureToDraw(NodeType type)
+{
+	if (type == NodeType::CLEAR)
+	{
+		texture = SOIL_load_OGL_texture("", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_INVERT_Y);
+	}
+	else if (type == NodeType::GOAL)
+	{
+		texture = SOIL_load_OGL_texture("", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_INVERT_Y);
+	}
+
+	glBindTexture(GL_TEXTURE_2D, texture);
+}
+
 
 Node::~Node()
 {
+}
+
+int Node::GetNodePosX()
+{
+	return posX;
+}
+
+void Node::SetNodePosX(int x)
+{
+	posX = x;
+}
+
+int Node::GetNodePosy()
+{
+	return posY;
+}
+
+void Node::SetNodePosY(int y)
+{
+	posY = y;
 }

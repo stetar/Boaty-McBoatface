@@ -22,11 +22,11 @@ Node * Grid::AccesNode(int x, int y)
 	return nullptr;
 }
 
-void Grid::SetStartingPosition(int x, int y)
+void Grid::SetStartingPosition(int x, int y, GameObject * boat)
 {
 	if (x <= width && y <= height && x > 0 && y > 0)
 	{
-		&gridArray[x][y].SetContainedObject(Boat * boat);
+		gridArray[x][y].SetContainedObject(boat);
 	}
 }
 
@@ -34,7 +34,7 @@ void Grid::SetGoal(int x, int y)
 {
 	if (x <= width && y <= height && x > 0 && y > 0)
 	{
-		&gridArray[x][y].SetNodeType = NodeType::GOAL;
+		gridArray[x][y].SetNodeType(NodeType::GOAL);
 	}
 }
 

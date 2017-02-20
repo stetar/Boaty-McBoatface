@@ -9,8 +9,9 @@ private:
 public:
 	Grid(int height, int width);
 	Node * AccesNode(int x, int y);
-	void SetStartingPosition(int x, int y);
+	void SetStartingPosition(int x, int y, GameObject * boat);
 	void SetGoal(int x, int y);
 	~Grid();
+
 };
 
