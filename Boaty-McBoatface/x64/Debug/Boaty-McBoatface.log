@@ -1,2 +1,9 @@
 ﻿  Program.cpp
-  Boaty-McBoatface.vcxproj -> C:\Users\Peter\Source\Repos\Boaty-McBoatface\x64\Debug\Boaty-McBoatface.exe
+  Node.cpp
+  Grid.cpp
+  GameWorld.cpp
+  GameObject.cpp
+  Boat.cpp
+  Generating Code...
+d:\projekter\visual studio\boaty-mcboatface\boaty-mcboatface\node.cpp(49): warning C4715: 'Node::GetContainedObject': not all control paths return a value
+LINK : fatal error LNK1104: cannot open file 'freeglut.lib'
