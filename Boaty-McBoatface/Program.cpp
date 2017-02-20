@@ -1,6 +1,7 @@
 #include "GameWorld.h"
 #include <GL\glut.h>
 #include <SOIL.h>
+#include <iostream>
 GameWorld * world;
 
 void InitOpenGL()
