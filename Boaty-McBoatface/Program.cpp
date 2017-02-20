@@ -1,8 +1,10 @@
 #include "GameWorld.h"
 #include <GL\glut.h>
 #include <SOIL.h>
+#include <iostream>
+#include "Wind.h"
 GameWorld * world;
-
+Wind * wind = new Wind();
 void InitOpenGL()
 {
 	glShadeModel(GL_SMOOTH);
