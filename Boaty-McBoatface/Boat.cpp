@@ -1,5 +1,7 @@
 #include "Boat.h"
+#include "Wind.h"
 
+Wind *wStr = new Wind();
 
 
 Boat::Boat(float initX, float initY, float initZ)
@@ -38,19 +40,19 @@ void Boat::Move(char input)
 	switch (input)
 	{
 	case 'w':
-		y += 1;
+		y += *(wStr)->nptr;
 		break;
 
 	case 's':
-		y -= 1;
+		y -= *(wStr)->sptr;
 		break;
 
 	case 'd':
-		x += 1;
+		x += *(wStr)->eptr;
 		break;
 
 	case 'a':
-		x -= 1;
+		x -= *(wStr)->wptr;
 		break;
 
 
