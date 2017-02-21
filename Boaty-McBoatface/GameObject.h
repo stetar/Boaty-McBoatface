@@ -7,6 +7,7 @@ class GameObject
 public:
 	GameObject();
 	virtual void Render();
+	virtual void Move(char input);
 	~GameObject();
 };
 

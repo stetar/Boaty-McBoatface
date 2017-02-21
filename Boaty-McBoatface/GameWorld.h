@@ -4,10 +4,10 @@
 #include "Boat.h"
 class GameWorld
 {
-	std::vector<GameObject*>*gOV;
+	
 
 public:
-
+	std::vector<GameObject*>*gOV;
 	GameWorld();
 	void Render();
 	~GameWorld();

@@ -33,3 +33,29 @@ void Boat::Render()
 	glPopMatrix();
 }
 
+void Boat::Move(char input)
+{
+	switch (input)
+	{
+	case 'w':
+		y += 1;
+		break;
+
+	case 's':
+		y -= 1;
+		break;
+
+	case 'd':
+		x += 1;
+		break;
+
+	case 'a':
+		x -= 1;
+		break;
+
+
+	default:
+		break;
+	}
+}
+
