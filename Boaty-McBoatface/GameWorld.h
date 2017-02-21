@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 #include "GameObject.h"
 #include <vector>
@@ -14,3 +15,20 @@ public:
 	~GameWorld();
 };
 
+=======
+#pragma once
+#include "GameObject.h"
+#include <vector>
+#include "Boat.h"
+class GameWorld
+{
+	
+
+public:
+	std::vector<GameObject*>*gOV;
+	GameWorld();
+	void Render();
+	~GameWorld();
+};
+
+>>>>>>> origin/master

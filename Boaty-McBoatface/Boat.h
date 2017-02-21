@@ -8,10 +8,12 @@ class Boat :
 	float x;
 	float y;
 	float z;
+	char input;
 	
 public:
 	Boat(float initX, float initY, float initZ);
 	~Boat();
 	void Render();
+	void Move(char input);
 };
 

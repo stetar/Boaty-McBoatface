@@ -41,6 +41,34 @@ void Keyboard(unsigned char key, int x, int y)
 	{
 	case 27://ESC
 		exit(0);
+		break;
+	case 119: //W
+		for each (GameObject* var in *world->gOV)
+		{
+			var->Move('w');
+		}
+		break;
+
+	case 97://A
+		for each (GameObject* var in *world->gOV)
+		{
+			var->Move('a');
+		}
+		break;
+
+	case 100://D
+		for each (GameObject* var in *world->gOV)
+		{
+			var->Move('d');
+		}
+		break;
+
+	case 115://S
+		for each (GameObject* var in *world->gOV)
+		{
+			var->Move('s');
+		}
+		break;
 	default:
 		break;
 	}

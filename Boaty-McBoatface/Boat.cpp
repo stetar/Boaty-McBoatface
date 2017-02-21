@@ -1,5 +1,12 @@
 #include "Boat.h"
+#include "Wind.h"
 
+<<<<<<< HEAD
+=======
+Wind *wStr = new Wind();
+
+
+>>>>>>> origin/master
 Boat::Boat(float initX, float initY, float initZ)
 {
 	x = initX;
@@ -28,5 +35,31 @@ void Boat::Render()
 	glEnd();
 
 	glPopMatrix();
+}
+
+void Boat::Move(char input)
+{
+	switch (input)
+	{
+	case 'w':
+		y += *(wStr)->nptr;
+		break;
+
+	case 's':
+		y -= *(wStr)->sptr;
+		break;
+
+	case 'd':
+		x += *(wStr)->eptr;
+		break;
+
+	case 'a':
+		x -= *(wStr)->wptr;
+		break;
+
+
+	default:
+		break;
+	}
 }
 

@@ -8,6 +8,10 @@ void GameObject::Render()
 {
 }
 
+void GameObject::Move(char inpunt)
+{
+}
+
 GameObject::~GameObject()
 {
 }
