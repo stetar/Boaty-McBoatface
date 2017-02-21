@@ -6,7 +6,8 @@
 
 GameWorld::GameWorld()
 {
-
+	gOV = new std::vector < GameObject*>();
+	gOV->push_back(new Boat(0,0,0));
 }
 
 void GameWorld::Render()
