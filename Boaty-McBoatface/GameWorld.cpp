@@ -8,6 +8,9 @@ GameWorld::GameWorld()
 {
 	gOV = new std::vector < GameObject*>();
 	gOV->push_back(new Boat(0,0,0));
+	glEnable(GL_TEXTURE_2D);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
 
 void GameWorld::Render()
