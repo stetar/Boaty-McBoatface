@@ -11,6 +11,7 @@ public:
 	Node * AccesNode(int x, int y);
 	void SetStartingPosition(int x, int y, GameObject * boat);
 	void SetGoal(int x, int y);
+	void AlignGrid();
 	~Grid();
 
 };

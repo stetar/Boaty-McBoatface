@@ -3,8 +3,13 @@
 #include <SOIL.h>
 #include <iostream>
 #include "Wind.h"
-GameWorld * world;
 Wind * wind = new Wind();
+GameWorld * world;
+void GameLoop()
+{
+	world->Render();
+}
+
 void InitOpenGL()
 {
 	glShadeModel(GL_SMOOTH);
@@ -16,14 +21,17 @@ void InitOpenGL()
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
 
-void Reshape(int width, int height)
+void Reshape(int height, int width)
 {
 	if (height == 0) { height = 1; }
 	glViewport(0, 0, width, height);
 	glMatrixMode(GL_PROJECTION);
+	//glPushMatrix();
 	glLoadIdentity();
+	//glOrtho(0, width, 0, height, -1, 1);
 	gluPerspective(45.0f, width / height, 0.0f, 100.0f);
 	glMatrixMode(GL_MODELVIEW);
+	//glPushMatrix();
 	glLoadIdentity();
 }
 
@@ -36,11 +44,6 @@ void Keyboard(unsigned char key, int x, int y)
 	default:
 		break;
 	}
-}
-
-void GameLoop()
-{
-	world->Render();
 }
 
 int main(int argc, char** argv)
@@ -56,17 +59,21 @@ int main(int argc, char** argv)
 	std::cout << "The wind from south strength is: " << *(wind)->sptr << std::endl;
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH);
-	glutInitWindowSize(500, 500);
+	int screenHeight = 500;
+	int screenWidth = 500;
+	glutInitWindowSize(screenWidth, screenHeight);
 	glutInitWindowPosition(0, 0);
 
 	glutCreateWindow("My Game");
 
 	InitOpenGL();
+	world = new GameWorld();
+	*world->screenWidthPtr = screenWidth;
+	*world->screenHeightPtr = screenHeight;
 	glutReshapeFunc(&Reshape);
 	glutDisplayFunc(&GameLoop);
 	glutKeyboardFunc(&Keyboard);
 
-	world = new GameWorld();
 	glutMainLoop();
 
 	return 0;

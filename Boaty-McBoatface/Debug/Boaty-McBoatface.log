@@ -1,7 +1,5 @@
-﻿  GameWorld.cpp
-  Generating Code...
-  Compiling...
-  Program.cpp
+﻿  Program.cpp
+  GameWorld.cpp
   Generating Code...
   soil.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification

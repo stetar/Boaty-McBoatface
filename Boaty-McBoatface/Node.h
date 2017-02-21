@@ -17,7 +17,7 @@ private:
 	bool isContainingObejct = false;
 	GLuint texture;
 public:
-	Node();
+	Node(int posX = 0, int posY = 0);
 	void SetNodeType(NodeType newType);
 	NodeType GetNodeType();
 	int GetNodeGridX();
@@ -31,6 +31,9 @@ public:
 	GameObject* GetContainedObject();
 	void SetContainedObject(GameObject * object);
 	void DefineTextureToDraw(NodeType type);
+	void Render();
+	void SetIsContainingObject(bool containingObject);
+	bool GetIsContainingObject();
 	~Node();
 };
 
