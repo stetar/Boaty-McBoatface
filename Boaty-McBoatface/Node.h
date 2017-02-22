@@ -15,7 +15,7 @@ private:
 	int posY;
 	GameObject * containedObject;
 	bool isContainingObejct = false;
-	GLuint texture;
+	GLuint * texture;
 public:
 	Node(int posX = 0, int posY = 0);
 	void SetNodeType(NodeType newType);
@@ -26,7 +26,7 @@ public:
 	void SetNodeGridY(int y);
 	int GetNodePosX();
 	void SetNodePosX(int x);
-	int GetNodePosy();
+	int GetNodePosY();
 	void SetNodePosY(int y);
 	GameObject* GetContainedObject();
 	void SetContainedObject(GameObject * object);

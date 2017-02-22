@@ -1,20 +1,21 @@
 #include "Grid.h"
 #include "Boat.h"
 
-Grid::Grid(int width = 7, int height = 7)
+Grid::Grid(int width, int height)
 {
 	this->height = height;
 	this->width = width;
-	*gridArray = new Node[width];
+	gridArray = new Node*[width];
 	for (int i = 0; i < width; i++)
 	{
 		gridArray[i] = new Node[height];
 	}
+	AlignGrid();
 }
 
 Node * Grid::AccesNode(int x, int y)
 {
-	if (x <= width && y <= height && x > 0 && y > 0)
+	if (x <= width && y <= height && x >= 0 && y >= 0)
 	{
 		return &gridArray[x][y];
 	}
@@ -40,10 +41,42 @@ void Grid::SetGoal(int x, int y)
 
 void Grid::AlignGrid()
 {
-	//for (int i = 0; i < width; i++)
-	//{
-	//	gridArray[i]->SetNodePosX()
-	//}
+	int x = 0;
+	int y = 0;
+	for (int i = 0; i < width; i++)
+	{
+		for (int a = 0; a < height; a++)
+		{
+			gridArray[i][a].SetNodeGridX(x);
+			gridArray[i][a].SetNodeGridY(y);
+			gridArray[i][a].SetNodePosX(i-3);
+			gridArray[i][a].SetNodePosY(a-3);
+			y++;
+		}
+		x++;
+		y = 0;
+	}
+}
+
+void Grid::Render()
+{
+	for (int i = 0; i < width; i++)
+	{
+		for (int a = 0; a < height; a++)
+		{
+			gridArray[i][a].Render();
+		}
+	}
+}
+
+int Grid::GetGridHeight()
+{
+	return this->height;
+}
+
+int Grid::GetGridWidth()
+{
+	return this->width;
 }
 
 Grid::~Grid()

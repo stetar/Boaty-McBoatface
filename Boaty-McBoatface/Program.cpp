@@ -26,12 +26,9 @@ void Reshape(int height, int width)
 	if (height == 0) { height = 1; }
 	glViewport(0, 0, width, height);
 	glMatrixMode(GL_PROJECTION);
-	//glPushMatrix();
 	glLoadIdentity();
-	//glOrtho(0, width, 0, height, -1, 1);
 	gluPerspective(45.0f, width / height, 0.0f, 100.0f);
 	glMatrixMode(GL_MODELVIEW);
-	//glPushMatrix();
 	glLoadIdentity();
 }
 

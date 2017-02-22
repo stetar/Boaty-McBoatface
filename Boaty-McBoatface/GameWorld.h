@@ -1,34 +1,19 @@
-<<<<<<< HEAD
 #pragma once
 #include "GameObject.h"
 #include <vector>
 #include "Boat.h"
+#include <stdlib.h>
+#include <GL\glut.h>
+#include "GameObject.h"
+#include "Grid.h"
 class GameWorld
 {
-	std::vector<GameObject*>*gOV;
 	int screenWidth, screenHeight;
 public:
 	int* screenWidthPtr = &screenWidth;
 	int* screenHeightPtr = &screenHeight;
-	GameWorld();
-	void Render();
-	~GameWorld();
-};
-
-=======
-#pragma once
-#include "GameObject.h"
-#include <vector>
-#include "Boat.h"
-class GameWorld
-{
-	
-
-public:
 	std::vector<GameObject*>*gOV;
 	GameWorld();
 	void Render();
 	~GameWorld();
 };
-
->>>>>>> origin/master

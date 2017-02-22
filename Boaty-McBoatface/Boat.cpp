@@ -1,18 +1,14 @@
 #include "Boat.h"
-#include "Wind.h"
 
-<<<<<<< HEAD
-=======
 Wind *wStr = new Wind();
 
-
->>>>>>> origin/master
-Boat::Boat(float initX, float initY, float initZ)
+Boat::Boat(float initX, float initY, float initZ, Grid * theGrid)
 {
 	x = initX;
 	y = initY;
 	z = initZ;
 	texture = SOIL_load_OGL_texture(".\\Boat.png", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_INVERT_Y);
+	this->theGrid = theGrid;
 }
 
 
@@ -42,19 +38,31 @@ void Boat::Move(char input)
 	switch (input)
 	{
 	case 'w':
-		y += *(wStr)->nptr;
+		if (y < theGrid->AccesNode(0,6)->GetNodePosY())
+		{
+			y += *(wStr)->nptr;
+		}
 		break;
 
 	case 's':
-		y -= *(wStr)->sptr;
+		if (y > theGrid->AccesNode(0,0)->GetNodePosY())
+		{
+			y -= *(wStr)->sptr;
+		}
 		break;
 
 	case 'd':
-		x += *(wStr)->eptr;
+		if (x < theGrid->AccesNode(6,0)->GetNodePosX())
+		{
+			x += *(wStr)->eptr;
+		}
 		break;
 
 	case 'a':
-		x -= *(wStr)->wptr;
+		if (x > theGrid->AccesNode(0,0)->GetNodePosX())
+		{
+			x -= *(wStr)->wptr;
+		}
 		break;
 
 
