@@ -64,8 +64,6 @@ void Boat::Move(char input)
 			x -= *(wStr)->wptr;
 		}
 		break;
-
-
 	default:
 		break;
 	}
