@@ -1,4 +1,9 @@
-﻿  Program.cpp
-Boat.obj : error LNK2019: unresolved external symbol _SOIL_load_OGL_texture referenced in function "public: __thiscall Boat::Boat(float,float,float)" (??0Boat@@QAE@MMM@Z)
-Node.obj : error LNK2001: unresolved external symbol _SOIL_load_OGL_texture
-C:\Users\Maks\Source\Repos\Boaty-McBoatface\Debug\Boaty-McBoatface.exe : fatal error LNK1120: 1 unresolved externals
+﻿  Boat.cpp
+  soil.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+Boat.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+  Boaty-McBoatface.vcxproj -> D:\Projekter\Visual Studio\Boaty-McBoatface\Debug\Boaty-McBoatface.exe
+  Boaty-McBoatface.vcxproj -> D:\Projekter\Visual Studio\Boaty-McBoatface\Debug\Boaty-McBoatface.pdb (Full PDB)

@@ -162,6 +162,9 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="Wind.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Debug\Boat.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

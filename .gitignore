@@ -29,3 +29,7 @@
 *.app
 
 Boaty-McBoatface.VC.VC.opendb
+Boaty-McBoatface.VC.db
+*.tlog
+Boaty-McBoatface/x64/Debug/vc140.idb
+*.pdb
