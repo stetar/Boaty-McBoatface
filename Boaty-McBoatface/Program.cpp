@@ -3,6 +3,7 @@
 #include <SOIL.h>
 #include <iostream>
 #include "Wind.h"
+#include <RandomFunctions.h>
 GameWorld * world;
 Wind * wind = new Wind();
 void InitOpenGL()
@@ -82,6 +83,8 @@ int main(int argc, char** argv)
 	std::cout << "The wind from west strength is: " << *(wind)->wptr << std::endl;
 	std::cout << "The wind from north strength is: " << *(wind)->nptr << std::endl;
 	std::cout << "The wind from south strength is: " << *(wind)->sptr << std::endl;
+	RandomFunctions rd;
+	std::cout << rd.randomNumber(1, 200);
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH);
 	glutInitWindowSize(500, 500);
