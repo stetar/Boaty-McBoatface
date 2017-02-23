@@ -1,3 +1,2 @@
-﻿Boat.obj : error LNK2019: unresolved external symbol _SOIL_load_OGL_texture referenced in function "public: __thiscall Boat::Boat(float,float,float,class Grid *)" (??0Boat@@QAE@MMMPAVGrid@@@Z)
-Node.obj : error LNK2001: unresolved external symbol _SOIL_load_OGL_texture
-D:\Projekter\Visual Studio\Boaty-McBoatface\Debug\Boaty-McBoatface.exe : fatal error LNK1120: 1 unresolved externals
+﻿  Boaty-McBoatface.vcxproj -> D:\Projekter\Visual Studio\Boaty-McBoatface\Debug\Boaty-McBoatface.exe
+  Boaty-McBoatface.vcxproj -> D:\Projekter\Visual Studio\Boaty-McBoatface\Debug\Boaty-McBoatface.pdb (Full PDB)
