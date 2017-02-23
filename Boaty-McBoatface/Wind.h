@@ -1,4 +1,5 @@
 #pragma once
+#include <RandomFunctions.h>
 class Wind
 {
 private:

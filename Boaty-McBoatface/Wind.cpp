@@ -3,10 +3,11 @@
 
 Wind::Wind()
 {
-	e = 1;
-	w = 1;
-	n = 1;
-	s = 1;
+	RandomFunctions rf;
+	e = rf.randomNumber(1,4);
+	w = rf.randomNumber(1,4);
+	n = rf.randomNumber(1,4);
+	s = rf.randomNumber(1,4);
 	eptr = &e;
 	wptr = &w;
 	nptr = &n;
